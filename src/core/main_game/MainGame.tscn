@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
+[ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
+[ext_resource path="res://src/ui/pause_menu/PauseMenu.cs" type="Script" id=3]
+[ext_resource path="res://src/ui/pause_menu/PauseRoot.cs" type="Script" id=4]
+
+[node name="MainGame" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="HudLayer" type="CanvasLayer" parent="."]
+pause_mode = 1
+layer = 10
+
+[node name="HudRoot" type="Control" parent="HudLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="HudLayer/HudRoot"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -28.0
+
+[node name="PanelContainer" type="PanelContainer" parent="HudLayer/HudRoot/CenterContainer"]
+margin_left = 505.0
+margin_right = 519.0
+margin_bottom = 28.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HudLayer/HudRoot/CenterContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 7.0
+margin_bottom = 21.0
+
+[node name="DialogPopup" type="Label" parent="HudLayer/HudRoot/CenterContainer/PanelContainer/VBoxContainer"]
+margin_bottom = 14.0
+script = ExtResource( 2 )
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 20
+
+[node name="PauseRoot" type="Control" parent="PauseLayer"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseLayer/PauseRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseLayer/PauseRoot/CenterContainer"]
+margin_right = 83.0
+margin_bottom = 58.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseLayer/PauseRoot/CenterContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 51.0
+
+[node name="Button" type="Button" parent="PauseLayer/PauseRoot/CenterContainer/PanelContainer/VBoxContainer"]
+margin_right = 69.0
+margin_bottom = 20.0
+text = "Continue"
+
+[node name="Button2" type="Button" parent="PauseLayer/PauseRoot/CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 69.0
+margin_bottom = 44.0
+text = "quit"
+
+[node name="TransitionLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 100
+
+[node name="TransitionRoot" type="Control" parent="TransitionLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="DebugLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 128
+
+[node name="DebugRoot" type="Control" parent="DebugLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
