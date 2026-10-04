@@ -25,9 +25,16 @@ public class MainGame : Node
 	private Player myplayer = new Player();
 	private Label _dialogboxLabel;
 	private readonly NodePath _dialogPopup = "HudLayer/HudRoot/CenterContainer/PanelContainer/VBoxContainer/DialogPopup";
+	
+	//private var dialogic = Engine.GetSingleton("Dialogic");
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		/* var dialogic = (Node)GetNode("/root/Dialogic");
+		var dialogNode = (CanvasLayer)dialogic.Call("start", "TestTimeline");
+		AddChild(dialogNode); */
+		var new_dialog = DialogicSharp.Start("TestTimeline");
+		AddChild(new_dialog);
 		if(_levelRoot != null){
 			_levelNode = GetNode<Node2D>(_levelRoot);
 		}
