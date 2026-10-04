@@ -7,7 +7,7 @@ public class PauseRoot : Control
 	// private int a = 2;
 	// private string b = "text";
 	private Button _button;
-	private readonly NodePath _buttonPath = "PauseLayer/PauseRoot/CenterContainer/PanelContainer/VBoxContainer/Button";
+	private readonly NodePath _buttonPath = "CenterContainer/PanelContainer/VBoxContainer/Button";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -22,6 +22,7 @@ public class PauseRoot : Control
   {
 	if(_button.Pressed){
 		GetTree().Paused = false;
+		this.Visible = false;
 	}
 	if(this.Visible == false){
 		if(GetTree().Paused){
