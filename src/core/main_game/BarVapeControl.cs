@@ -27,10 +27,13 @@ public class BarVapeControl : Control
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(float delta)
 	{
+        //we can probably switch this out now for the pressed() signal in the button
+        //  to make it like the timer function below
 		if(_button.Pressed){
 			_textureProgressNode.Value += 25;
 		}
 	}
+    //the signal in the Timer 
 	private void _on_Timer_timeout()
 	{
 		_textureProgressNode.Value -= 1;
