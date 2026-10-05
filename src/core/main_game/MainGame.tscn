@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
 [ext_resource path="res://src/ui/pause_menu/PauseMenu.cs" type="Script" id=3]
 [ext_resource path="res://src/ui/pause_menu/PauseRoot.cs" type="Script" id=4]
 [ext_resource path="res://assets/art/ui/progressbar/empty-bar.png" type="Texture" id=5]
+[ext_resource path="res://src/core/main_game/BarVapeControl.cs" type="Script" id=6]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -56,18 +57,34 @@ margin_bottom = 21.0
 margin_bottom = 14.0
 script = ExtResource( 2 )
 
-[node name="TextureProgress" type="TextureProgress" parent="HudLayer/HudRoot"]
+[node name="BarVapeControl" type="Control" parent="HudLayer/HudRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+
+[node name="TextureProgress" type="TextureProgress" parent="HudLayer/HudRoot/BarVapeControl"]
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 89.0
-margin_right = 140.0
-margin_bottom = -212.0
+margin_left = 581.0
+margin_right = 632.0
+margin_bottom = 248.0
 value = 50.0
 texture_under = ExtResource( 5 )
 texture_progress = SubResource( 2 )
 fill_mode = 3
 nine_patch_stretch = true
+
+[node name="Timer" type="Timer" parent="HudLayer/HudRoot/BarVapeControl"]
+autostart = true
+
+[node name="Button" type="Button" parent="HudLayer/HudRoot/BarVapeControl"]
+margin_left = 682.0
+margin_top = 138.0
+margin_right = 790.0
+margin_bottom = 173.0
+focus_mode = 0
+text = "button"
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -125,3 +142,5 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 43.0
 margin_bottom = 42.0
+
+[connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
