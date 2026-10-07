@@ -39,6 +39,7 @@ layer = 10
 [node name="HudRoot" type="Control" parent="HudLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="HudLayer/HudRoot"]
 anchor_top = 1.0
@@ -202,6 +203,37 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 43.0
 margin_bottom = 42.0
+
+[node name="LoseLayer" type="CanvasLayer" parent="."]
+
+[node name="LoseRoot" type="Control" parent="LoseLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+
+[node name="LoseContainer" type="CenterContainer" parent="LoseLayer/LoseRoot"]
+margin_left = 511.0
+margin_top = 351.0
+margin_right = 595.0
+margin_bottom = 399.0
+mouse_filter = 1
+
+[node name="LosePanelContainer" type="PanelContainer" parent="LoseLayer/LoseRoot/LoseContainer"]
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 41.0
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LoseLayer/LoseRoot/LoseContainer/LosePanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 27.0
+
+[node name="LoseButton" type="Button" parent="LoseLayer/LoseRoot/LoseContainer/LosePanelContainer/VBoxContainer"]
+margin_right = 69.0
+margin_bottom = 20.0
+text = "You Lose"
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
