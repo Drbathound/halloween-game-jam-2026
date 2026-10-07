@@ -68,5 +68,7 @@ public class MainGame : Node
 	  if(Input.IsActionJustPressed("ui_cancel")){
 		GetTree().Paused = true;
 	  }
+
+	  
   }
 }
