@@ -124,6 +124,8 @@ margin_left = 206.0
 margin_top = 47.0
 margin_right = 247.0
 margin_bottom = 67.0
+focus_mode = 0
+enabled_focus_mode = 0
 text = "beer"
 
 [node name="VapeControl" type="Control" parent="HudLayer/HudRoot"]
@@ -152,6 +154,8 @@ margin_left = 262.0
 margin_top = 47.0
 margin_right = 304.0
 margin_bottom = 67.0
+focus_mode = 0
+enabled_focus_mode = 0
 text = "vape"
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
