@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/ui/pause_menu/PauseRoot.cs" type="Script" id=4]
 [ext_resource path="res://assets/art/ui/progressbar/empty-bar.png" type="Texture" id=5]
 [ext_resource path="res://src/core/main_game/BarVapeControl.cs" type="Script" id=6]
+[ext_resource path="res://src/core/main_game/LoseRoot.cs" type="Script" id=7]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -35,6 +36,7 @@ layer = 10
 [node name="HudRoot" type="Control" parent="HudLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="HudLayer/HudRoot"]
 anchor_top = 1.0
@@ -142,5 +144,36 @@ margin_left = 3.0
 margin_top = 2.0
 margin_right = 43.0
 margin_bottom = 42.0
+
+[node name="LoseLayer" type="CanvasLayer" parent="."]
+
+[node name="LoseRoot" type="Control" parent="LoseLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+
+[node name="LoseContainer" type="CenterContainer" parent="LoseLayer/LoseRoot"]
+margin_left = 511.0
+margin_top = 351.0
+margin_right = 595.0
+margin_bottom = 399.0
+mouse_filter = 1
+
+[node name="LosePanelContainer" type="PanelContainer" parent="LoseLayer/LoseRoot/LoseContainer"]
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 41.0
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LoseLayer/LoseRoot/LoseContainer/LosePanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 76.0
+margin_bottom = 27.0
+
+[node name="LoseButton" type="Button" parent="LoseLayer/LoseRoot/LoseContainer/LosePanelContainer/VBoxContainer"]
+margin_right = 69.0
+margin_bottom = 20.0
+text = "You Lose"
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
