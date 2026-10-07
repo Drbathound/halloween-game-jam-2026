@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -7,10 +7,12 @@
 [ext_resource path="res://assets/art/ui/progressbar/empty-bar.png" type="Texture" id=5]
 [ext_resource path="res://src/core/main_game/BarVapeControl.cs" type="Script" id=6]
 [ext_resource path="res://src/core/main_game/BeerControl.cs" type="Script" id=7]
-[ext_resource path="res://assets/art/ui/progressbar/temp-cristal-full.png" type="Texture" id=8]
-[ext_resource path="res://assets/art/ui/progressbar/temp-cristal-empty.png" type="Texture" id=9]
+[ext_resource path="res://assets/art/ui/progressbar/Vape_Sprite_Full.png" type="Texture" id=8]
+[ext_resource path="res://assets/art/ui/progressbar/Beer_Sprite_Full.png" type="Texture" id=9]
 [ext_resource path="res://src/core/main_game/VapeControl.cs" type="Script" id=10]
 [ext_resource path="res://assets/art/world/Uninvited Canvas.png" type="Texture" id=11]
+[ext_resource path="res://assets/art/ui/progressbar/Beer_Sprite_Empty.png" type="Texture" id=12]
+[ext_resource path="res://assets/art/ui/progressbar/Vape_Sprite_Empty.png" type="Texture" id=13]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -105,11 +107,12 @@ script = ExtResource( 7 )
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 581.0
-margin_right = 632.0
-margin_bottom = 248.0
-texture_under = ExtResource( 9 )
-texture_progress = ExtResource( 8 )
+margin_left = 190.0
+margin_top = 10.0
+margin_right = 222.0
+margin_bottom = 2.0
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 9 )
 fill_mode = 3
 nine_patch_stretch = true
 
@@ -117,10 +120,10 @@ nine_patch_stretch = true
 autostart = true
 
 [node name="Button" type="Button" parent="HudLayer/HudRoot/BeerControl"]
-margin_left = 588.0
-margin_top = 329.0
-margin_right = 696.0
-margin_bottom = 364.0
+margin_left = 206.0
+margin_top = 47.0
+margin_right = 247.0
+margin_bottom = 67.0
 text = "beer"
 
 [node name="VapeControl" type="Control" parent="HudLayer/HudRoot"]
@@ -132,12 +135,12 @@ script = ExtResource( 10 )
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 898.0
-margin_top = 2.0
-margin_right = 949.0
-margin_bottom = 250.0
-texture_under = ExtResource( 5 )
-texture_progress = SubResource( 2 )
+margin_left = 246.0
+margin_top = 10.0
+margin_right = 278.0
+margin_bottom = 2.0
+texture_under = ExtResource( 13 )
+texture_progress = ExtResource( 8 )
 fill_mode = 3
 nine_patch_stretch = true
 
@@ -145,10 +148,10 @@ nine_patch_stretch = true
 autostart = true
 
 [node name="Button" type="Button" parent="HudLayer/HudRoot/VapeControl"]
-margin_left = 895.0
-margin_top = 322.0
-margin_right = 1003.0
-margin_bottom = 357.0
+margin_left = 262.0
+margin_top = 47.0
+margin_right = 304.0
+margin_bottom = 67.0
 text = "vape"
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
@@ -165,8 +168,8 @@ script = ExtResource( 4 )
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
+margin_left = -42.0
 margin_top = -29.0
-margin_bottom = 29.0
 script = ExtResource( 3 )
 
 [node name="PanelContainer" type="PanelContainer" parent="PauseLayer/PauseRoot/CenterContainer"]
