@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1791415616.cfg"
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0,
 			"animation_wait": false,
