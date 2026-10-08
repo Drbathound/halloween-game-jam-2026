@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://assets/art/world/Uninvited Canvas.png" type="Texture" id=11]
 [ext_resource path="res://assets/art/ui/progressbar/Beer_Sprite_Empty.png" type="Texture" id=12]
 [ext_resource path="res://assets/art/ui/progressbar/Vape_Sprite_Empty.png" type="Texture" id=13]
+[ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Active.png" type="Texture" id=14]
+[ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Idle.png" type="Texture" id=15]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -158,6 +160,25 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "vape"
 
+[node name="PhoneControl" type="Control" parent="HudLayer/HudRoot"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -40.0
+margin_right = 20.0
+
+[node name="TextureButton" type="TextureButton" parent="HudLayer/HudRoot/PhoneControl"]
+margin_left = 122.0
+margin_top = -21.0
+margin_right = 138.0
+margin_bottom = -5.0
+rect_scale = Vector2( 3, 3 )
+toggle_mode = true
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 14 )
+
 [node name="PauseLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
 layer = 20
@@ -210,10 +231,8 @@ pause_mode = 2
 layer = 128
 
 [node name="DebugRoot" type="Control" parent="DebugLayer"]
-margin_left = 3.0
-margin_top = 2.0
-margin_right = 43.0
-margin_bottom = 42.0
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
