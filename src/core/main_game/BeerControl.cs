@@ -41,7 +41,8 @@ public class BeerControl : Control
 	private void _on_Button_pressed()
 	{
 		// Replace with function body.
-		_textureProgressNode.Value += 25;
+		//_textureProgressNode.Value += 25;
+		_textureProgressNode.Value += GD.RandRange(10,30);
 	}
 
 }
