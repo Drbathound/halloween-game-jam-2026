@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/art/ui/progressbar/Vape_Sprite_Empty.png" type="Texture" id=13]
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Active.png" type="Texture" id=14]
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Idle.png" type="Texture" id=15]
+[ext_resource path="res://src/core/main_game/PhoneControl.cs" type="Script" id=16]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -168,13 +169,23 @@ anchor_bottom = 1.0
 margin_left = -20.0
 margin_top = -40.0
 margin_right = 20.0
+script = ExtResource( 16 )
 
-[node name="TextureButton" type="TextureButton" parent="HudLayer/HudRoot/PhoneControl"]
+[node name="GuestList" type="ItemList" parent="HudLayer/HudRoot/PhoneControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -121.0
+margin_right = 112.0
+margin_bottom = -24.0
+
+[node name="Phone" type="TextureButton" parent="HudLayer/HudRoot/PhoneControl"]
 margin_left = 122.0
 margin_top = -21.0
 margin_right = 138.0
 margin_bottom = -5.0
 rect_scale = Vector2( 3, 3 )
+focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 14 )
@@ -238,3 +249,4 @@ margin_bottom = 40.0
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
 [connection signal="pressed" from="HudLayer/HudRoot/BeerControl/Button" to="HudLayer/HudRoot/BeerControl" method="_on_Button_pressed"]
 [connection signal="timeout" from="HudLayer/HudRoot/VapeControl/Timer" to="HudLayer/HudRoot/VapeControl" method="_on_Timer_timeout"]
+[connection signal="toggled" from="HudLayer/HudRoot/PhoneControl/Phone" to="HudLayer/HudRoot/PhoneControl" method="_on_Phone_toggled"]
