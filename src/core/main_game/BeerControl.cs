@@ -28,9 +28,9 @@ public class BeerControl : Control
 	{
 		//we can probably switch this out now for the pressed() signal in the button
 		//  to make it like the timer function below
-		if(_button.Pressed){
+		/* if(_button.Pressed){
 			_textureProgressNode.Value += 5;
-		}
+		} */
 	}
 	//the signal in the Timer 
 	private void _on_Timer_timeout()
@@ -38,4 +38,12 @@ public class BeerControl : Control
 		_textureProgressNode.Value -= 5;
 		// Replace with function body.
 	}
+	private void _on_Button_pressed()
+	{
+		// Replace with function body.
+		_textureProgressNode.Value += 25;
+	}
+
 }
+
+

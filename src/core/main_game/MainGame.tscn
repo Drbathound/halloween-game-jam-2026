@@ -217,4 +217,5 @@ margin_bottom = 42.0
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
+[connection signal="pressed" from="HudLayer/HudRoot/BeerControl/Button" to="HudLayer/HudRoot/BeerControl" method="_on_Button_pressed"]
 [connection signal="timeout" from="HudLayer/HudRoot/VapeControl/Timer" to="HudLayer/HudRoot/VapeControl" method="_on_Timer_timeout"]
