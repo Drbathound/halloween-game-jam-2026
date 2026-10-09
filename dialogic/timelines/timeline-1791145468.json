@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1791415616.cfg"
+		},
+		{
 			"animation": "1-fade_in.gd",
 			"animation_length": 0,
 			"animation_wait": false,
@@ -26,6 +30,56 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "test text 1"
+		},
+		{
+			"character": "character-1791144921.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "let me in"
+		},
+		{
+			"character": "character-1791144921.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "let me in!"
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "giggidy"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "cring"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "test"
 		}
 	],
 	"metadata": {
