@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Active.png" type="Texture" id=14]
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Idle.png" type="Texture" id=15]
 [ext_resource path="res://src/core/main_game/PhoneControl.cs" type="Script" id=16]
+[ext_resource path="res://assets/audio/music/Background_Music_Mix.wav" type="AudioStream" id=17]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -41,6 +42,10 @@ pause_mode = 1
 [node name="Background" type="Sprite" parent="World"]
 position = Vector2( 160, 90 )
 texture = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
+stream = ExtResource( 17 )
+autoplay = true
 
 [node name="HudLayer" type="CanvasLayer" parent="."]
 pause_mode = 1

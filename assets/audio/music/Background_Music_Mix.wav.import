@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Short Theme.wav-f0db07331456ab88ad3cfc618a10226e.sample"
+path="res://.import/Background_Music_Mix.wav-c8687620754957ce6c76c97fcac73db4.sample"
 
 [deps]
 
-source_file="res://assets/audio/music/Short Theme.wav"
-dest_files=[ "res://.import/Short Theme.wav-f0db07331456ab88ad3cfc618a10226e.sample" ]
+source_file="res://assets/audio/music/Background_Music_Mix.wav"
+dest_files=[ "res://.import/Background_Music_Mix.wav-c8687620754957ce6c76c97fcac73db4.sample" ]
 
 [params]
 
