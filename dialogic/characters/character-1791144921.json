@@ -9,13 +9,13 @@
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
-	"offset_y": 0,
+	"offset_y": -40,
 	"portraits": [
 		{
 			"name": "Default",
 			"path": "res://assets/art/characters/guests/test-character.png"
 		}
 	],
-	"scale": 100,
+	"scale": 150,
 	"theme": ""
 }
