@@ -42,6 +42,12 @@ public class GameOverRoot : Control
 	private NodePath _beerControlPath = "%BeerControl";
 	private Node _dialogic;
 	private NodePath _dialogicPath = "root/MainGame/World/DialogicControl/Dialogic";
+	/* private Button _restartButton;
+	private Button _quitButton;
+	private CenterContainer _buttonContainer;
+	private readonly NodePath _buttonContainerPath = "CenterContainer";
+	private readonly NodePath _restartButtonPath = "CenterContainer/PanelContainer/VBoxContainer/restartbutton";
+	private readonly NodePath _quitButtonPath2 = "CenterContainer/PanelContainer/VBoxContainer/quitbutton"; */
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -61,12 +67,25 @@ public class GameOverRoot : Control
 			_beerControl = GetNode<BeerControl>(_beerControlPath);
 			_beerControl.Connect(nameof(BeerControl.BeerMax), this, nameof(OnBeerMaxDetect));
 		}
+		/* if(_restartButtonPath != null){
+			_restartButton = GetNode<Button>(_restartButtonPath);
+		}
+		if (_quitButtonPath2 != null){
+			_quitButton = GetNode<Button>(_quitButtonPath2);
+		}
+		if(_buttonContainer != null){
+			_buttonContainer = GetNode<CenterContainer>(_buttonContainerPath);
+			//_buttonContainer.Visible = false;
+		} */
+		//this.Visible = false;
 		//_dialogic = GetNode<Node>(_dialogicPath);
 		//_dialogic.Connect(nameof(Node.jessicaEnd), this, nameof(OnGuestEnd));
 	}
 	public void SuccessfulParty(){
 		_isGameOver = true;
 		_winRoot.Visible = true;
+		EmitSignal(nameof(GameOver), "play again?");
+	//	_restartButton.Text = "play again?";
 	}
 	public void OnGuestEnd(){
 		if(!_isGameOver){
@@ -153,8 +172,13 @@ public class GameOverRoot : Control
 			AddChild(default_dialog);
 			break;
 		}
+		EmitSignal(nameof(GameOver), "try again?");
+		//_buttonContainer.Visible = true;
+		//_restartButton.Text = "try again?";
 
 	}
+	[Signal]
+	public delegate string GameOver();
 }
 
 
