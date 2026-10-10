@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -17,6 +17,10 @@
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Idle.png" type="Texture" id=15]
 [ext_resource path="res://src/core/main_game/PhoneControl.cs" type="Script" id=16]
 [ext_resource path="res://assets/audio/music/Background_Music_Mix.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/core/main_game/GameOverRoot.cs" type="Script" id=18]
+[ext_resource path="res://src/core/main_game/DialogicControl.cs" type="Script" id=19]
+[ext_resource path="res://src/core/main_game/WinRoot.gd" type="Script" id=20]
+[ext_resource path="res://src/core/main_game/RestartControl.cs" type="Script" id=21]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -44,8 +48,15 @@ position = Vector2( 160, 90 )
 texture = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
+pause_mode = 2
 stream = ExtResource( 17 )
 autoplay = true
+
+[node name="DialogicControl" type="Control" parent="World"]
+unique_name_in_owner = true
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 19 )
 
 [node name="HudLayer" type="CanvasLayer" parent="."]
 pause_mode = 1
@@ -56,6 +67,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="CenterContainer" type="CenterContainer" parent="HudLayer/HudRoot"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -63,8 +75,9 @@ margin_top = -28.0
 
 [node name="PanelContainer" type="PanelContainer" parent="HudLayer/HudRoot/CenterContainer"]
 margin_left = 153.0
+margin_top = 7.0
 margin_right = 167.0
-margin_bottom = 28.0
+margin_bottom = 21.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HudLayer/HudRoot/CenterContainer/PanelContainer"]
 margin_left = 7.0
@@ -107,6 +120,7 @@ focus_mode = 0
 text = "button"
 
 [node name="BeerControl" type="Control" parent="HudLayer/HudRoot"]
+unique_name_in_owner = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 7 )
@@ -119,6 +133,7 @@ margin_left = 190.0
 margin_top = 10.0
 margin_right = 222.0
 margin_bottom = 2.0
+value = 50.0
 texture_under = ExtResource( 12 )
 texture_progress = ExtResource( 9 )
 fill_mode = 3
@@ -137,11 +152,12 @@ enabled_focus_mode = 0
 text = "beer"
 
 [node name="VapeControl" type="Control" parent="HudLayer/HudRoot"]
+unique_name_in_owner = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 
-[node name="TextureProgress" type="TextureProgress" parent="HudLayer/HudRoot/VapeControl"]
+[node name="VapeProgress" type="TextureProgress" parent="HudLayer/HudRoot/VapeControl"]
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
@@ -149,6 +165,7 @@ margin_left = 246.0
 margin_top = 10.0
 margin_right = 278.0
 margin_bottom = 2.0
+value = 50.0
 texture_under = ExtResource( 13 )
 texture_progress = ExtResource( 8 )
 fill_mode = 3
@@ -166,6 +183,9 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "vape"
 
+[node name="VapeMaxTimer" type="Timer" parent="HudLayer/HudRoot/VapeControl"]
+autostart = true
+
 [node name="PhoneControl" type="Control" parent="HudLayer/HudRoot"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -179,10 +199,10 @@ script = ExtResource( 16 )
 [node name="GuestList" type="ItemList" parent="HudLayer/HudRoot/PhoneControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -121.0
-margin_right = 112.0
-margin_bottom = -24.0
+margin_left = -131.0
+margin_top = -117.0
+margin_right = 130.0
+margin_bottom = -5.0
 
 [node name="Phone" type="TextureButton" parent="HudLayer/HudRoot/PhoneControl"]
 margin_left = 122.0
@@ -194,6 +214,103 @@ focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 14 )
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 50
+
+[node name="GameOverRoot" type="Control" parent="GameOverLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 18 )
+
+[node name="LoseRoot" type="Control" parent="GameOverLayer/GameOverRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOverLayer/GameOverRoot/LoseRoot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 280.0
+margin_bottom = 140.0
+color = Color( 0, 0, 0, 0.266667 )
+
+[node name="Label" type="Label" parent="GameOverLayer/GameOverRoot/LoseRoot/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_right = 36.5
+margin_bottom = 14.0
+text = "Game Over"
+align = 1
+
+[node name="WinRoot" type="Control" parent="GameOverLayer/GameOverRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 20 )
+
+[node name="ColorRect" type="ColorRect" parent="GameOverLayer/GameOverRoot/WinRoot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 280.0
+margin_bottom = 140.0
+color = Color( 0, 0, 0, 0.266667 )
+
+[node name="Label" type="Label" parent="GameOverLayer/GameOverRoot/WinRoot/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_right = 36.5
+margin_bottom = 14.0
+text = "You Win!"
+align = 1
+
+[node name="RestartControl" type="Control" parent="GameOverLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -320.0
+margin_bottom = -177.0
+mouse_filter = 2
+script = ExtResource( 21 )
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverLayer/RestartControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 125.0
+margin_top = 25.5
+margin_right = 188.0
+margin_bottom = 92.5
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="GameOverLayer/RestartControl/CenterContainer"]
+margin_left = 6.0
+margin_top = 4.0
+margin_right = 57.0
+margin_bottom = 62.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverLayer/RestartControl/CenterContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 44.0
+margin_bottom = 51.0
+
+[node name="restartbutton" type="Button" parent="GameOverLayer/RestartControl/CenterContainer/PanelContainer/VBoxContainer"]
+margin_right = 37.0
+margin_bottom = 20.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="quitbutton" type="Button" parent="GameOverLayer/RestartControl/CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 37.0
+margin_bottom = 44.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "quit"
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -251,7 +368,12 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
+[connection signal="value_changed" from="HudLayer/HudRoot/BeerControl/TextureProgress" to="GameOverLayer/GameOverRoot" method="_on_TextureProgress_value_changed"]
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
 [connection signal="pressed" from="HudLayer/HudRoot/BeerControl/Button" to="HudLayer/HudRoot/BeerControl" method="_on_Button_pressed"]
+[connection signal="value_changed" from="HudLayer/HudRoot/VapeControl/VapeProgress" to="GameOverLayer/GameOverRoot" method="_on_VapeProgress_value_changed"]
 [connection signal="timeout" from="HudLayer/HudRoot/VapeControl/Timer" to="HudLayer/HudRoot/VapeControl" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HudLayer/HudRoot/VapeControl/VapeMaxTimer" to="HudLayer/HudRoot/VapeControl" method="_on_VapeMaxTimer_timeout"]
 [connection signal="toggled" from="HudLayer/HudRoot/PhoneControl/Phone" to="HudLayer/HudRoot/PhoneControl" method="_on_Phone_toggled"]
+[connection signal="pressed" from="GameOverLayer/RestartControl/CenterContainer/PanelContainer/VBoxContainer/restartbutton" to="GameOverLayer/RestartControl" method="_on_restartbutton_pressed"]
+[connection signal="pressed" from="GameOverLayer/RestartControl/CenterContainer/PanelContainer/VBoxContainer/quitbutton" to="GameOverLayer/RestartControl" method="_on_quitbutton_pressed"]

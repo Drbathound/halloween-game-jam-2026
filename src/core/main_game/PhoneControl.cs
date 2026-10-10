@@ -17,15 +17,22 @@ public class PhoneControl : Control
 			_guestList = GetNode<ItemList>(_guestListPath);
 		}
 		if(_guestList != null){
-			GD.Print("node found");
+			//GD.Print("node found");
 		}
 		
 		/*if(_phonePath != null){
 			_phone = GetNode<Button>(_phonePath);
 		}*/
 		_guestList.Visible = false;
-		_guestList.AddItem("Jimmy, pumpkin cape orange");
+		_guestList.AddItem("Jimmy, just a chill guy");
 		_guestList.AddItem("UNINVITED: Jessica, purple cat");
+		_guestList.AddItem("UNINVITED: Jimmy's evil twin, not so chill guy");
+		_guestList.AddItem("Harold, he's always talking about dating");
+		_guestList.AddItem("Paul, thinks he's the jonkler");
+		_guestList.AddItem("Lilian, poison ivy");
+		_guestList.AddItem("Emily, blue");
+		_guestList.AddItem("The heathers, 3 of them");
+		_guestList.AddItem("Chud, big face");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

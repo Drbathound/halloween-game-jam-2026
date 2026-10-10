@@ -1,0 +1,21 @@
+{
+	"color": "#ff4c6670",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1791604869.json",
+	"mirror_portraits": false,
+	"name": "Jimmy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/art/characters/guests/Jimmy.png"
+		}
+	],
+	"scale": 500,
+	"theme": ""
+}

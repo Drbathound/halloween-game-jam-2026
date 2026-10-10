@@ -1,0 +1,21 @@
+{
+	"color": "#fffbb000",
+	"description": "",
+	"display_name": "Jimmy's Evil Twin",
+	"display_name_bool": true,
+	"id": "character-1791592196.json",
+	"mirror_portraits": false,
+	"name": "Jimmytwin",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/art/characters/guests/Naked_Guy.png"
+		}
+	],
+	"scale": 500,
+	"theme": ""
+}
