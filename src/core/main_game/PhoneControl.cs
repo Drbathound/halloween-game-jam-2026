@@ -24,8 +24,11 @@ public class PhoneControl : Control
 			_phone = GetNode<Button>(_phonePath);
 		}*/
 		_guestList.Visible = false;
-		_guestList.AddItem("Jimmy, pumpkin cape orange");
+		_guestList.AddItem("Jimmy, just a chill guy");
 		_guestList.AddItem("UNINVITED: Jessica, purple cat");
+		_guestList.AddItem("UNINVITED: Jimmy's evil twin, not so chill guy");
+		_guestList.AddItem("Harold, he's always talking about dating");
+		_guestList.AddItem("Paul, thinks he's the jonkler");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

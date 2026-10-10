@@ -54,7 +54,7 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1791144921.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "giggidy"
@@ -67,7 +67,7 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1791144921.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "cring"
@@ -76,10 +76,346 @@
 			"event_id": "dialogic_013"
 		},
 		{
-			"character": "",
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791144921.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791592196.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "test"
+			"text": "I'm Jimmy's evil twin."
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "You should let me in."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "gigerdy"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why are you like this."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592663.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791592663.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Have you heard of hypergamy?"
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592663.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We're so back."
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592663.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's so over."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592663.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey bro, you gonna be at the gym tomorrow? We're sparring."
+		},
+		{
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am loud and obnoxious"
+		},
+		{
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I like music that rhymes"
+		},
+		{
+			"character": "character-1791593657.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Let me stop you right there."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Based"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791593410.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "They got to you, didn't they."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm Jimmy's evil twin again."
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I think you should let me in."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "oh yeah!"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You should have died at birth."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
 		}
 	],
 	"metadata": {

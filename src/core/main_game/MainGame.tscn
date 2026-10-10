@@ -56,6 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="CenterContainer" type="CenterContainer" parent="HudLayer/HudRoot"]
+visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -63,8 +64,9 @@ margin_top = -28.0
 
 [node name="PanelContainer" type="PanelContainer" parent="HudLayer/HudRoot/CenterContainer"]
 margin_left = 153.0
+margin_top = 7.0
 margin_right = 167.0
-margin_bottom = 28.0
+margin_bottom = 21.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HudLayer/HudRoot/CenterContainer/PanelContainer"]
 margin_left = 7.0
@@ -119,6 +121,7 @@ margin_left = 190.0
 margin_top = 10.0
 margin_right = 222.0
 margin_bottom = 2.0
+value = 50.0
 texture_under = ExtResource( 12 )
 texture_progress = ExtResource( 9 )
 fill_mode = 3
@@ -149,6 +152,7 @@ margin_left = 246.0
 margin_top = 10.0
 margin_right = 278.0
 margin_bottom = 2.0
+value = 50.0
 texture_under = ExtResource( 13 )
 texture_progress = ExtResource( 8 )
 fill_mode = 3
@@ -179,10 +183,10 @@ script = ExtResource( 16 )
 [node name="GuestList" type="ItemList" parent="HudLayer/HudRoot/PhoneControl"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -121.0
-margin_right = 112.0
-margin_bottom = -24.0
+margin_left = -131.0
+margin_top = -117.0
+margin_right = 130.0
+margin_bottom = -5.0
 
 [node name="Phone" type="TextureButton" parent="HudLayer/HudRoot/PhoneControl"]
 margin_left = 122.0
