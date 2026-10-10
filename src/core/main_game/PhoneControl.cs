@@ -29,6 +29,10 @@ public class PhoneControl : Control
 		_guestList.AddItem("UNINVITED: Jimmy's evil twin, not so chill guy");
 		_guestList.AddItem("Harold, he's always talking about dating");
 		_guestList.AddItem("Paul, thinks he's the jonkler");
+		_guestList.AddItem("Lilian, poison ivy");
+		_guestList.AddItem("Emily, blue");
+		_guestList.AddItem("The heathers, 3 of them");
+		_guestList.AddItem("Chud, big face");
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
