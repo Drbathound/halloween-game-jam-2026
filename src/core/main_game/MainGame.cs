@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Drawing.Text;
 using System.Dynamic;
+using System.Runtime.Serialization;
 
 public class MainGame : Node
 {
@@ -25,7 +26,14 @@ public class MainGame : Node
 	private Player myplayer = new Player();
 	private Label _dialogboxLabel;
 	private readonly NodePath _dialogPopup = "HudLayer/HudRoot/CenterContainer/PanelContainer/VBoxContainer/DialogPopup";
-	
+	private GameOverRoot _gameOverControl;
+	private NodePath _gameOverControlPath = "GameOverLayer/GameOverRoot";
+	/* private Control _loseRoot;
+	private NodePath _loseRootPath = "GameOverLayer/LoseRoot";
+	private Control _winRoot;
+	private NodePath _winRootPath = "GameOverLayer/LoseRoot"; */
+	/* private ColorRect _gameOverBox;
+	private readonly NodePath _gameOverBoxPath = "HudLayer/HudRoot/GameOverControl/GameOverBox"; */
 	//private var dialogic = Engine.GetSingleton("Dialogic");
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -33,8 +41,25 @@ public class MainGame : Node
 		/* var dialogic = (Node)GetNode("/root/Dialogic");
 		var dialogNode = (CanvasLayer)dialogic.Call("start", "TestTimeline");
 		AddChild(dialogNode); */
-		var new_dialog = DialogicSharp.Start("TestTimeline");
-		AddChild(new_dialog);
+		/* var new_dialog = DialogicSharp.Start("TestTimeline");
+		AddChild(new_dialog); */
+		/* if(_loseRootPath != null){
+			_loseRoot = GetNode<Control>(_loseRootPath);
+			_loseRoot.Visible = false;
+		}
+		if(_winRootPath != null){
+			_winRoot = GetNode<Control>(_winRootPath);
+			_winRoot.Visible = false;
+		} */
+		if(_gameOverControlPath != null){
+			_gameOverControl = GetNode<GameOverRoot>(_gameOverControlPath);
+			//_gameOverControl.Visible = false;
+		}
+		/* if(_gameOverBoxPath != null){
+			_gameOverBox = GetNode<ColorRect>(_gameOverBoxPath);
+			_gameOverBox.Visible = false;
+			_gameOverBox.MouseFilter = Control.MouseFilterEnum.Ignore;
+		} */
 		if(_levelRoot != null){
 			_levelNode = GetNode<Node2D>(_levelRoot);
 		}
@@ -56,6 +81,7 @@ public class MainGame : Node
 		if(_dialogPopup != null){
 			_dialogboxLabel = GetNode<Label>(_dialogPopup);
 		}
+		
 		_dialogboxLabel.Text = "hello world";
 	}
 
@@ -68,5 +94,8 @@ public class MainGame : Node
 	  if(Input.IsActionJustPressed("ui_cancel")){
 		GetTree().Paused = true;
 	  }
+	  /* if(_gameOverControl.IsGameOver){
+		QueueFree();
+	  } */
   }
 }

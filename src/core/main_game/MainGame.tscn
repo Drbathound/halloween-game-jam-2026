@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://src/core/main_game/MainGame.cs" type="Script" id=1]
 [ext_resource path="res://src/core/main_game/DialogPopup.cs" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://assets/art/ui/Invite List/Phone_Sprite_Idle.png" type="Texture" id=15]
 [ext_resource path="res://src/core/main_game/PhoneControl.cs" type="Script" id=16]
 [ext_resource path="res://assets/audio/music/Background_Music_Mix.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/core/main_game/GameOverRoot.cs" type="Script" id=18]
+[ext_resource path="res://src/core/main_game/DialogicControl.cs" type="Script" id=19]
 
 [sub_resource type="Image" id=3]
 data = {
@@ -44,8 +46,14 @@ position = Vector2( 160, 90 )
 texture = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World"]
+pause_mode = 2
 stream = ExtResource( 17 )
 autoplay = true
+
+[node name="DialogicControl" type="Control" parent="World"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 19 )
 
 [node name="HudLayer" type="CanvasLayer" parent="."]
 pause_mode = 1
@@ -109,6 +117,7 @@ focus_mode = 0
 text = "button"
 
 [node name="BeerControl" type="Control" parent="HudLayer/HudRoot"]
+unique_name_in_owner = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 7 )
@@ -140,11 +149,12 @@ enabled_focus_mode = 0
 text = "beer"
 
 [node name="VapeControl" type="Control" parent="HudLayer/HudRoot"]
+unique_name_in_owner = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 10 )
 
-[node name="TextureProgress" type="TextureProgress" parent="HudLayer/HudRoot/VapeControl"]
+[node name="VapeProgress" type="TextureProgress" parent="HudLayer/HudRoot/VapeControl"]
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
@@ -169,6 +179,9 @@ margin_bottom = 67.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "vape"
+
+[node name="VapeMaxTimer" type="Timer" parent="HudLayer/HudRoot/VapeControl"]
+autostart = true
 
 [node name="PhoneControl" type="Control" parent="HudLayer/HudRoot"]
 anchor_left = 0.5
@@ -198,6 +211,54 @@ focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 14 )
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="GameOverRoot" type="Control" parent="GameOverLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 18 )
+
+[node name="LoseRoot" type="Control" parent="GameOverLayer/GameOverRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOverLayer/GameOverRoot/LoseRoot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 280.0
+margin_bottom = 140.0
+color = Color( 0, 0, 0, 0.266667 )
+
+[node name="Label" type="Label" parent="GameOverLayer/GameOverRoot/LoseRoot/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_right = 36.5
+margin_bottom = 14.0
+text = "Game Over"
+align = 1
+
+[node name="WinRoot" type="Control" parent="GameOverLayer/GameOverRoot"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="GameOverLayer/GameOverRoot/WinRoot"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 280.0
+margin_bottom = 140.0
+color = Color( 0, 0, 0, 0.266667 )
+
+[node name="Label" type="Label" parent="GameOverLayer/GameOverRoot/WinRoot/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_right = 36.5
+margin_bottom = 14.0
+text = "You Win!"
+align = 1
 
 [node name="PauseLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
@@ -255,7 +316,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [connection signal="timeout" from="HudLayer/HudRoot/BarVapeControl/Timer" to="HudLayer/HudRoot/BarVapeControl" method="_on_Timer_timeout"]
+[connection signal="value_changed" from="HudLayer/HudRoot/BeerControl/TextureProgress" to="GameOverLayer/GameOverRoot" method="_on_TextureProgress_value_changed"]
 [connection signal="timeout" from="HudLayer/HudRoot/BeerControl/Timer" to="HudLayer/HudRoot/BeerControl" method="_on_Timer_timeout"]
 [connection signal="pressed" from="HudLayer/HudRoot/BeerControl/Button" to="HudLayer/HudRoot/BeerControl" method="_on_Button_pressed"]
+[connection signal="value_changed" from="HudLayer/HudRoot/VapeControl/VapeProgress" to="GameOverLayer/GameOverRoot" method="_on_VapeProgress_value_changed"]
 [connection signal="timeout" from="HudLayer/HudRoot/VapeControl/Timer" to="HudLayer/HudRoot/VapeControl" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HudLayer/HudRoot/VapeControl/VapeMaxTimer" to="HudLayer/HudRoot/VapeControl" method="_on_VapeMaxTimer_timeout"]
 [connection signal="toggled" from="HudLayer/HudRoot/PhoneControl/Phone" to="HudLayer/HudRoot/PhoneControl" method="_on_Phone_toggled"]

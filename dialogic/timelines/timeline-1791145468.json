@@ -184,6 +184,114 @@
 			"animation_length": 0.5,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't care what Brad told you. It wasn't even like that!"
+		},
+		{
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I just want to talk to him."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're a lifesaver"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're such an asshole."
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791593414.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1791595228.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
 			"character": "character-1791592663.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,

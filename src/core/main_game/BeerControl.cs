@@ -42,9 +42,17 @@ public class BeerControl : Control
 	{
 		// Replace with function body.
 		//_textureProgressNode.Value += 25;
-		_textureProgressNode.Value += GD.RandRange(10,30);
+		double temp = _textureProgressNode.Value;
+		var addval = GD.RandRange(10,30);
+		if(temp + addval > 110){
+			GD.Print("beer over full");
+			EmitSignal(nameof(BeerMax));
+		}
+		_textureProgressNode.Value += addval;
+		//_textureProgressNode.Value += GD.RandRange(10,30);
 	}
-
+	[Signal]
+	public delegate void BeerMax();
 }
 
 
