@@ -1,11 +1,11 @@
 {
-	"color": "#ffff0000",
+	"color": "#ff0f7b0b",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1791593410.json",
+	"id": "character-1791604890.json",
 	"mirror_portraits": false,
-	"name": "Paul",
+	"name": "Lilian",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/art/characters/guests/Lillian_Poison_Ivy.png"
 		}
 	],
-	"scale": 100,
+	"scale": 200,
 	"theme": ""
 }

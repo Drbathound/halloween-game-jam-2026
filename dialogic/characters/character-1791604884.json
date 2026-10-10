@@ -1,11 +1,11 @@
 {
-	"color": "#ffff0000",
+	"color": "#ff003e9e",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1791593410.json",
+	"id": "character-1791604884.json",
 	"mirror_portraits": false,
-	"name": "Paul",
+	"name": "Emily",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,9 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/art/characters/guests/Emily_Blue_Cat.png"
 		}
 	],
-	"scale": 100,
+	"scale": 500,
 	"theme": ""
 }

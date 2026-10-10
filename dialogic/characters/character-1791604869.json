@@ -1,11 +1,11 @@
 {
-	"color": "#ffff0000",
+	"color": "#ff4c6670",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1791593410.json",
+	"id": "character-1791604869.json",
 	"mirror_portraits": false,
-	"name": "Paul",
+	"name": "Jimmy",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -13,7 +13,7 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": ""
+			"path": "res://assets/art/characters/guests/Jimmy.png"
 		}
 	],
 	"scale": 100,

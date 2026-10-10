@@ -10,7 +10,7 @@
 			"animation_wait": false,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -26,19 +26,25 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "test text 1"
+			"text": "Good to see you as the bouncer form my Halloween Party."
 		},
 		{
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "let me in"
+			"text": "Make sure to check your phone for the guest list."
 		},
 		{
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Do NOT let Jessica or my evil twin in."
+		},
+		{
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_010",
 			"options": [
 
@@ -54,7 +60,7 @@
 			"value": ""
 		},
 		{
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "giggidy"
@@ -67,7 +73,7 @@
 			"value": ""
 		},
 		{
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "cring"
@@ -80,7 +86,7 @@
 			"animation_length": 0.5,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1791144921.json",
+			"character": "character-1791604869.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "",
@@ -144,6 +150,30 @@
 			"text": "gigerdy"
 		},
 		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1791595176.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"choice": "reject",
 			"condition": "",
 			"definition": "",
@@ -155,9 +185,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Why are you like this."
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -178,6 +205,9 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"animation": "1-fade_in.gd",
@@ -203,7 +233,7 @@
 			"character": "character-1791593414.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't care what Brad told you. It wasn't even like that!"
+			"text": "I don't care what Jimmy  told you. It wasn't even like that!"
 		},
 		{
 			"character": "character-1791593414.json",
@@ -246,6 +276,10 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1791595228.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"choice": "reject",
@@ -389,7 +423,7 @@
 			"character": "character-1791593410.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hey bro, you gonna be at the gym tomorrow? We're sparring."
+			"text": "Hey bro, you gonna be at the gym tomorrow? It's sparring night."
 		},
 		{
 			"character": "character-1791593410.json",
@@ -490,6 +524,30 @@
 			"text": "oh yeah!"
 		},
 		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1791595176.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"choice": "reject",
 			"condition": "",
 			"definition": "",
@@ -500,10 +558,7 @@
 			"character": "character-1791592196.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You should have died at birth."
-		},
-		{
-			"event_id": "dialogic_013"
+			"text": "This is not very cash money of you."
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -524,6 +579,495 @@
 			},
 			"type": 1,
 			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604903.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791604903.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "So are you gonna let us in or what?"
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604903.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hmm. For a greasy little nobody, you do have good bone structure."
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Did you have a brain tumor for breakfast?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604903.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604875.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791604875.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I wonder what the chart looks like."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604875.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe things do happen?"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604875.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"animation": "instant_out.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604875.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "instant_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791605767.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791605767.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nothing ever happens."
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791605767.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604884.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791604884.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Do you like my costume?"
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604884.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks!"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604884.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "aw, Jimmy said he wanted to see me tonight."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604884.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604890.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791604890.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I know i have these leaves, but if you get a rash it's not my fault."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Here's some cortizone just in case."
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791604890.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Okay, fine. Maybe it'd be a little my fault."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791604890.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You should let me in."
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "I swear, bro. I won't do anything weird, trust."
+		},
+		{
+			"choice": "admit",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We have never been more back."
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "oh yeah!"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_timeline": "timeline-1791595176.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "reject",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You should have died on birth."
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 0.5,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1791592196.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {
