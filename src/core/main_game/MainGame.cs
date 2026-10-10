@@ -60,7 +60,7 @@ public class MainGame : Node
 			_gameOverBox.Visible = false;
 			_gameOverBox.MouseFilter = Control.MouseFilterEnum.Ignore;
 		} */
-		if(_levelRoot != null){
+		/* if(_levelRoot != null){
 			_levelNode = GetNode<Node2D>(_levelRoot);
 		}
 		if(_entityRoot != null){
@@ -68,7 +68,7 @@ public class MainGame : Node
 		}
 		if(_effectRoot != null){
 			_effectNode = GetNode<Node2D>(_effectRoot);
-		}
+		} */
 		if(_hudRoot != null){
 			_hudNode = GetNode<Control>(_hudRoot);
 		}
