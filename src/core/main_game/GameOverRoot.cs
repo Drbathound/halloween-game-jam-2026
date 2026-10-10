@@ -40,6 +40,8 @@ public class GameOverRoot : Control
 	private NodePath _vapeControlPath = "%VapeControl";
 	private BeerControl _beerControl;
 	private NodePath _beerControlPath = "%BeerControl";
+	private Node _dialogic;
+	private NodePath _dialogicPath = "root/MainGame/World/DialogicControl/Dialogic";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -58,6 +60,18 @@ public class GameOverRoot : Control
 		if(_beerControlPath != null){
 			_beerControl = GetNode<BeerControl>(_beerControlPath);
 			_beerControl.Connect(nameof(BeerControl.BeerMax), this, nameof(OnBeerMaxDetect));
+		}
+		//_dialogic = GetNode<Node>(_dialogicPath);
+		//_dialogic.Connect(nameof(Node.jessicaEnd), this, nameof(OnGuestEnd));
+	}
+	public void SuccessfulParty(){
+		_isGameOver = true;
+		_winRoot.Visible = true;
+	}
+	public void OnGuestEnd(){
+		if(!_isGameOver){
+			_isGameOver = true;
+			_gameLost(LossType.guest);
 		}
 	}
 	private void OnBeerMaxDetect(){
@@ -131,6 +145,8 @@ public class GameOverRoot : Control
 			AddChild(all_vape_dialog);
 			break;
 			case LossType.guest:
+			var guest_bad_dialog = DialogicSharp.Start("guestBadEnd");
+			AddChild(guest_bad_dialog);
 			break;
 			default:
 			var default_dialog = DialogicSharp.Start("defaultLoss");

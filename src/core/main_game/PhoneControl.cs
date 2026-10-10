@@ -17,7 +17,7 @@ public class PhoneControl : Control
 			_guestList = GetNode<ItemList>(_guestListPath);
 		}
 		if(_guestList != null){
-			GD.Print("node found");
+			//GD.Print("node found");
 		}
 		
 		/*if(_phonePath != null){

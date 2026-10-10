@@ -29,7 +29,7 @@
 			"character": "character-1791604869.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Good to see you as the bouncer form my Halloween Party."
+			"text": "Good to see you as the bouncer for my Halloween Party."
 		},
 		{
 			"character": "character-1791604869.json",
@@ -233,7 +233,7 @@
 			"character": "character-1791593414.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "I don't care what Jimmy  told you. It wasn't even like that!"
+			"text": "I don't care what Jimmy told you. It wasn't even like that!"
 		},
 		{
 			"character": "character-1791593414.json",
@@ -574,7 +574,7 @@
 			"character": "character-1791592196.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "This is not very cash money of you."
+			"text": "That is not very cash money of you."
 		},
 		{
 			"animation": "4-fade_out.gd",
@@ -649,7 +649,7 @@
 			"value": ""
 		},
 		{
-			"character": "",
+			"character": "character-1791604903.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Did you have a brain tumor for breakfast?"
@@ -704,7 +704,7 @@
 
 			],
 			"portrait": "",
-			"question": "I wonder what the chart looks like."
+			"question": "I wonder what the chart says about this."
 		},
 		{
 			"choice": "admit",
@@ -1084,6 +1084,10 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"emit_signal": "party_success",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

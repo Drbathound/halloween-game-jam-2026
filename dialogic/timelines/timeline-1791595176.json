@@ -11,6 +11,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "He flashed everyone at the party."
+		},
+		{
+			"emit_signal": "jimmy_end",
+			"event_id": "dialogic_040"
 		}
 	],
 	"metadata": {

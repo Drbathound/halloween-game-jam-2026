@@ -38,9 +38,9 @@ public class MainGame : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		/* var dialogic = (Node)GetNode("/root/Dialogic");
-		var dialogNode = (CanvasLayer)dialogic.Call("start", "TestTimeline");
-		AddChild(dialogNode); */
+		//var dialogic = (Node)GetNode("/root/Dialogic");
+		//var dialogNode = (CanvasLayer)dialogic.Call("start", "TestTimeline");
+		//AddChild(dialogNode);
 		/* var new_dialog = DialogicSharp.Start("TestTimeline");
 		AddChild(new_dialog); */
 		/* if(_loseRootPath != null){
