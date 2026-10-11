@@ -1,8 +1,8 @@
 {
 	"color": "#ffffffff",
 	"description": "",
-	"display_name": "",
-	"display_name_bool": false,
+	"display_name": "Chud",
+	"display_name_bool": true,
 	"id": "character-1791604875.json",
 	"mirror_portraits": false,
 	"name": "chud",

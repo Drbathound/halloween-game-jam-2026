@@ -920,7 +920,7 @@
 
 			],
 			"portrait": "",
-			"question": "I know i have these leaves, but if you get a rash it's not my fault."
+			"question": "If you get a weird rash, its not my fault."
 		},
 		{
 			"choice": "admit",
@@ -946,7 +946,7 @@
 			"character": "character-1791604890.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Okay, fine. Maybe it'd be a little my fault."
+			"text": "Okay, fine. Maybe it'd be partially my fault."
 		},
 		{
 			"event_id": "dialogic_013"
@@ -1060,7 +1060,7 @@
 			"character": "character-1791592196.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You should have died on birth."
+			"text": "You should have died at birth."
 		},
 		{
 			"animation": "4-fade_out.gd",
